@@ -18,8 +18,16 @@ body {
   min-height: 100vh;
   color: var(--foreground);
   background:
-    radial-gradient(circle at top left, rgba(147, 51, 234, 0.25), transparent 55%),
-    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.23), transparent 55%),
+    radial-gradient(
+      circle at top left,
+      rgba(147, 51, 234, 0.25),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(56, 189, 248, 0.23),
+      transparent 55%
+    ),
     linear-gradient(135deg, #02001a 0%, #14002e 40%, #1d0140 60%, #001b3a 100%);
   background-attachment: fixed;
   overflow-x: hidden;
@@ -32,15 +40,8 @@ body {
   inset: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(
-      rgba(148, 163, 184, 0.07) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(148, 163, 184, 0.07) 1px,
-      transparent 1px
-    );
+    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
   background-size: 120px 120px;
   mix-blend-mode: soft-light;
   z-index: 0;
@@ -48,7 +49,12 @@ body {
 
 /* Glassmorphism card */
 .glass-card {
-  background: radial-gradient(circle at top left, rgba(139, 92, 246, 0.18), transparent 55%),
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(139, 92, 246, 0.18),
+      transparent 55%
+    ),
     rgba(10, 10, 25, 0.72);
   border-radius: 1.25rem;
   border: 1px solid rgba(129, 140, 248, 0.45);
@@ -104,10 +110,16 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(244, 244, 245, 0.2), transparent 60%);
+  background: linear-gradient(
+    120deg,
+    rgba(244, 244, 245, 0.2),
+    transparent 60%
+  );
   opacity: 0;
   transform: translateX(-40%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .btn-neon:hover::before {
@@ -118,7 +130,12 @@ body {
 .tag-pill {
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.65);
-  background: radial-gradient(circle at top left, rgba(94, 234, 212, 0.2), transparent 55%),
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(94, 234, 212, 0.2),
+      transparent 55%
+    ),
     rgba(15, 23, 42, 0.9);
   box-shadow:
     0 0 0 1px rgba(15, 23, 42, 0.7),
@@ -140,7 +157,11 @@ body {
   border-radius: 999px;
   pointer-events: none;
   mix-blend-mode: screen;
-  background: radial-gradient(circle, rgba(129, 140, 248, 0.38), transparent 65%);
+  background: radial-gradient(
+    circle,
+    rgba(129, 140, 248, 0.38),
+    transparent 65%
+  );
   filter: blur(4px);
   z-index: 5;
 }
@@ -151,7 +172,11 @@ body {
   inset-inline: 0;
   top: 0;
   height: 3px;
-  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.9), transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(15, 23, 42, 0.9),
+    transparent 70%
+  );
   z-index: 40;
 }
 
@@ -230,7 +255,11 @@ body {
   width: 3px;
   height: 3px;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(248, 250, 252, 0.9), transparent 60%);
+  background: radial-gradient(
+    circle,
+    rgba(248, 250, 252, 0.9),
+    transparent 60%
+  );
   box-shadow:
     0 0 12px rgba(129, 140, 248, 0.9),
     0 0 26px rgba(34, 211, 238, 0.9);
@@ -242,10 +271,14 @@ body {
   padding-block: 4rem;
 }
 
+/* Radial gradient utilities */
+.bg-radial-gradient {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
 @media (min-width: 768px) {
   .section-padding {
     padding-inline: 3rem;
     padding-block: 5rem;
   }
 }
-

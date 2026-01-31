@@ -4,6 +4,8 @@ import "./globals.css";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { CursorGlow } from "@/components/CursorGlow";
 import { ParticleField } from "@/components/ParticleField";
+import { HackerModeProvider } from "@/contexts/HackerModeContext";
+import { HackerModeToggle } from "@/components/HackerModeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,10 +33,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased cyber-grid`}
       >
-        <ScrollProgress />
-        <CursorGlow />
-        <ParticleField />
-        {children}
+        <HackerModeProvider>
+          <ScrollProgress />
+          <CursorGlow />
+          <ParticleField />
+          <HackerModeToggle />
+          {children}
+        </HackerModeProvider>
       </body>
     </html>
   );
